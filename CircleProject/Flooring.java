@@ -3,12 +3,16 @@ Colin Grad
 09-15-2020
 Flooring Project
 */
+//import 
+	//no imports
 //main class
 public class Flooring{
+	//functions
 	public static double priceForFlooring(double a, double b){
 		double price = a * b;
 		return price;
-	}
+	} //end fucntions
+	//main
 	public static void main(String[] args) {
 		//decimal Format
 		//variables
@@ -27,20 +31,20 @@ public class Flooring{
 		System.out.println("****************************************\n");
 		System.out.println("    Welcome to the flooring Calc\n");
 		System.out.println("****************************************\n");
-		//print area of room and board size plus the cost of the board
-		System.out.println("The area of the Room is: " + area_Calc +" square feet\n"); 
-		System.out.println("The area of one board is: " + board_Area + " square feet\n");
-		System.out.println("Each package(6 boards) cost: $" + board_cost + "\n");
 		//code for program
 		area_Twenty = (area_Calc * 0.20) + area_Calc;
 		flooring_Pack = area_Twenty / board_Area; // divide square footage by the square footage of board
 		number_Of_Packs = flooring_Pack / 6; //divide by 6 cuz 6 boards in a pack
 		round_Up = Math.ceil(number_Of_Packs); //round up to highest whole number
-		System.out.println("Area of the floor without extra: " + area_Calc + "\n");
-		System.out.println("Area of floor plus 20%: " + area_Twenty + "\n"); 
-		System.out.println("Number of packs of flooring: " + round_Up + "\n");
-		final_Price = priceForFlooring(round_Up, board_cost); //fucntion call to calc final price
-		System.out.println("The total price of flooring is: $" + final_Price + "\n");
-		
+		final_Price = priceForFlooring(round_Up, board_cost); //fucntion to calculate price
+		//print statments
+		System.out.println("The area of the Room is: " + area_Calc +" square feet\n"); //print area of room
+		System.out.println("The area of one board is: " + board_Area + " square feet\n"); //print area of board
+		System.out.println("Each package(6 boards) cost: $" + board_cost + "\n"); //print boards in each pack
+		System.out.println("Area of floor plus 20%: " + area_Twenty + " square feet\n"); //print area with 20% added
+		System.out.println("Number of packs of flooring: " + round_Up + " packs\n"); //print number of packs needed
+		System.out.println("The total price of flooring is: $" + final_Price + "\n"); //print final price
+		System.out.println("Program Completed,\nThank you!\n");
+		//end program
 	}
-}
+} //end main
